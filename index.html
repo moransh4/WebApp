@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+	<title>WebApp</title>
+
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" href="css/reset.css">
+
+
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+	<!--&lt;!&ndash; Latest compiled and minified JavaScript &ndash;&gt;-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+	<header>
+		<div class="row row-no-padding layout-wrap">
+			<a class="col-xs-2 focus "   href="#">
+				<img src="img/logo-netcraft.svg" alt="netcraft">
+			</a>
+
+			<form class="col-xs-offset-7 col-xs-3 search-box " >
+				<input class="focus search" type="search" name="q"  placeholder="Search">
+			</form>
+		</div>
+	</header>
+
+	<section class="page-body layout-wrap">
+		<div class=" notifications"><p class="notifications-data"></p></div>
+
+		<nav>
+			<div class="nav-section dropdown">
+				<p class="select">Select <br> Reporting Platform</p>
+
+				<div class="menu">
+					<div class="menu-caption">
+						<p>Choose QS report</p>
+						<img class="arrow" src="img/icons/arrow.png">
+					</div>
+
+					<ul class="action-list">
+						<li><a href="#">Corporate</a></li>
+						<li><a href="#">Simple</a></li>
+						<li><a href="#">Business</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="nav-section dropdown">
+				<p class="select">Select <br> Dashboard</p>
+
+				<div class="menu">
+					<div class="menu-caption">
+						<p>Choose dashboard</p>
+						<img class="arrow" src="img/icons/arrow.png">
+					</div>
+
+					<ul class="action-list">
+						<li><a href="#">Account Dashboard</a></li>
+						<li><a href="#">Daily Huddle Dashboard</a></li>
+						<li><a href="#">Tier 2 Dashboard</a></li>
+						<li><a href="#">ADM Dashboard</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="nav-section dropdown">
+				<p class="select">Help &amp;<br> Tutorials</p>
+
+				<div class="menu">
+					<div class="menu-caption">
+						<p>Choose guide</p>
+						<img class="arrow" src="img/icons/arrow.png">
+					</div>
+
+					<ul class="action-list">
+						<li><a href="#">Real Time</a></li>
+						<li><a href="#">Past Data</a></li>
+						<li><a href="#">Corporate Data</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<section class="tabs">
+
+			<ul class="list">
+				<li class="tab1 active">
+					<i class="fa fa-external-link"></i>
+					<a data-href="#quick-reports" class="tab" href="javascript:void(0)">Quick Reports</a>
+				</li>
+				<li class="tab1">
+					<i class="fa fa-star-o"></i>
+					<a data-href="#my-folders" class="tab" href="javascript:void(0)">My Folders</a>
+				</li>
+				<li class="tab1">
+					<i class="fa fa-folder-open-o"></i>
+					<a data-href="#my-team-folders" class="tab" href="javascript:void(0)">My Team Folders</a>
+				</li>
+				<li class="tab1">
+					<i class="fa fa-files-o"></i>
+					<a data-href="#public-folders" class="tab" href="javascript:void(0)">Public Folders</a>
+				</li>
+			</ul>
+
+
+			<div id="quick-reports" class="tab-list active-panel">
+
+				<select class="dropdown-list hide"></select>
+
+				<div class="setting"><a class="img-setting"></a></div>
+
+				<a class="website-link" href="" target="_blank" >
+					<img class="expand-img" src="img/icons/expand.png" alt="expand-website">
+				</a>
+
+				<div class="wrapper-report clearfix">
+					<form  name="form1" class="validate"  method="POST" action="" >
+					<ul class="row report">
+						<li class="report-row"><label>Report 1 : </label></li>
+						<li class="report-row report-name" ><label>Name</label> <input class="siteName" type="text" minlength="2"  name="website1" placeholder="  Site Name"  ></li>
+						<li class="report-row report-url"><label>URL</label> <input class="urlSite" type="url"  name="urlAddress1" placeholder="  Site URL"  ></li>
+					</ul>
+
+					<ul class="row report">
+						<li class="report-row"><label>Report 2 : </label></li>
+						<li class="report-row report-name" ><label>Name</label> <input class="siteName" type="text" minlength="2"  name="website2" placeholder="  Site Name"  ></li>
+						<li class="report-row report-url"><label>URL</label> <input class="urlSite" type="url" name="urlAddress2" placeholder="  Site URL"  ></li>
+					</ul>
+
+					<ul class="row report">
+						<li class="report-row"><label>Report 3 : </label></li>
+						<li class="report-row report-name" ><label>Name</label> <input class="siteName" type="text" minlength="2"  name="website3" placeholder="  Site Name"  ></li>
+						<li class="report-row report-url"><label>URL</label> <input class="urlSite" type="url" name="urlAddress3" placeholder="  Site URL"  ></li>
+					</ul>
+
+					<div class="save-or-cancel-reports">
+						 <!--<a class="clear"><span>Clear All</span></a>-->
+						 <a class="cancel"><span>Cancel</span></a>
+						 <button type="submit" class="save">Save</button>
+					</div>
+
+					</form>
+
+
+
+				</div>
+
+				<div class="iframe-wrap hide">
+					<iframe class="ifram-choose" src="" width="100%" height="700"
+							frameborder="0" scrolling="yes">
+					</iframe>
+				</div>
+
+			</div>
+
+			<div id="my-folders" class="tab-list">
+				<a class="website-link" target="_blank" href="http://www.paulirish.com">
+					<img class= "expand-img" src="img/icons/expand.png" alt="expand-website">
+				</a>
+				<iframe src="http://www.paulirish.com" width="100%" height="700"
+						frameborder="0" scrolling="yes"></iframe>
+			</div>
+
+			<div id="my-team-folders"  class="tab-list">
+
+				<select  class="dropdown-list hide"></select>
+
+
+				<div class="setting"><a class="img-setting"></a></div>
+
+				<a class="website-link" target="_blank" href="">
+					<img class="expand-img" src="img/icons/expand.png" alt="expand-website">
+				</a>
+
+				<div class="wrapper-report clearfix">
+					<form name="form2" class="validate" method="POST" action="">
+					<ul class="row report">
+						<li class="report-row"><label>Report 4 : </label></li>
+						<li class="report-row report-name" ><label>Name</label> <input class="siteName" type="text" name="website4" placeholder="  Site Name"></li>
+						<li class="report-row report-url"><label>URL</label> <input class="urlSite" type="url" name="urlAddress4" placeholder="  Site URL"></li>
+					</ul>
+
+					<ul class="row report">
+						<li class="report-row"><label>Report 5 : </label></li>
+						<li class="report-row report-name" ><label>Name</label> <input class="siteName" type="text" name="website5" placeholder="  Site Name"></li>
+						<li class="report-row report-url"><label>URL</label> <input class="urlSite" type="url" name="urlAddress5" placeholder="  Site URL"></li>
+					</ul>
+
+					<ul class="row report">
+						<li class="report-row"><label>Report 6 : </label></li>
+						<li class="report-row report-name" ><label>Name</label> <input class="siteName" type="text" name="website6" placeholder="  Site Name"></li>
+						<li class="report-row report-url"><label>URL</label> <input  class="urlSite" type="url" name="urlAddress6" placeholder="  Site URL"></li>
+					</ul>
+
+					<div class="save-or-cancel-reports">
+						<!--<a class="clear"><span>Clear All</span></a>-->
+						<a class="cancel"><span>Cancel</span></a>
+						<button type="submit" class="save">Save</button>
+					</div>
+
+
+					</form>
+
+
+				</div>
+
+				<div class="iframe-wrap hide">
+					<iframe class="ifram-choose" src="" width="100%" height="700"
+							frameborder="0" scrolling="yes">
+					</iframe>
+				</div>
+
+			</div>
+
+			<div id="public-folders" class="tab-list">
+				<a class="website-link" target="_blank" href="http://addyosmani.com/">
+					<img class= "expand-img" src="img/icons/expand.png" alt="expand-website">
+				</a>
+				<iframe src="http://addyosmani.com/" width="100%" height="700"
+						frameborder="0" scrolling="yes"></iframe>
+			</div>
+		</section>
+	</section>
+
+	<script type="text/javascript" src="js/RequireJS.js"></script>
+	<script type="text/javascript" src="js/utils.js"></script>
+	<script type="text/javascript" src="js/notification.js"></script>
+	<script type="text/javascript" src="js/settings.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/ifram.js"></script>
+	<script type="text/javascript" src="js/search.js"></script>
+	<script type="text/javascript" src="js/tabs.js"></script>
+	<script type="text/javascript" src="js/validate.js"></script>
+
+
+</body>
+
+</html>
