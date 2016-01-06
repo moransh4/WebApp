@@ -10,6 +10,9 @@ $(function(){
                 window.scrollTo(0, 0);
         }
 
+        history.pushState(null, "", location.href.split("?")[0]);
+
+
 
         var name = $('.siteName');
         var url = $('.urlSite');

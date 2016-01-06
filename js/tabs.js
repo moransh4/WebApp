@@ -16,6 +16,8 @@ var tabs = (function(){
         $(target_panel_selector).addClass('active-panel');
         // Save selected tab index in session stroage.So after page refresh active tab will be maintained
         sessionStorage.setItem('selected-tab', $strElement.index());
+
+        window.location.hash = "/"+target_panel_selector.slice(1);
     }
     $(document).ready(function () {
         // Check if selected tab is stored in session stroage
@@ -23,6 +25,7 @@ var tabs = (function(){
         {
             //Make tab active based on index got from session stroage
             maketabActive($(".tab1:eq(" + sessionStorage.getItem('selected-tab') + ")"));
+
         }
     });
     var open_tab = function () {

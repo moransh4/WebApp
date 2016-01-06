@@ -7,15 +7,15 @@
 var search = (function () {
 
     var flag= false;
-    var iframe = $('.ifram-choose').eq(0);
 
     var reports0 = JSON.parse(localStorage.getItem("reports0"));
     var reports1 = JSON.parse(localStorage.getItem("reports1"));
 
-    var data= reports0.concat(reports1);
+    var data= reports0.concat(reports1).filter(function(val){
+        return val!==null;
+    });
 
     var search_name = getParameterByName('q').toLowerCase();
-
 
 
     function getParameterByName(name) {
@@ -24,7 +24,6 @@ var search = (function () {
             results = regex.exec(location.search);
         return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
     }
-
 
     var search = function() {
         flag = false;
@@ -41,8 +40,9 @@ var search = (function () {
     };
 
     var open_ifram = function(link){
+        sessionStorage.setItem('selected-tab', $('.tab1').index());
         $('.list li.active').removeClass('active');
-        $(".tab1").eq(0).addClass('active');
+        $('.tab1').eq(0).addClass('active');
         $('.wrapper-report').eq(0).addClass('close-report');
         $('.iframe-wrap').eq(0).removeClass('hide');
         $('.ifram-choose').eq(0).attr('src', link);
@@ -51,9 +51,8 @@ var search = (function () {
     };
 
     return{
-        search: search(),
-        flag: flag ,
-        search_name : search_name
+        search: search()
+
     }
 
 
